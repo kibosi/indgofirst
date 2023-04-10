@@ -2,7 +2,7 @@ dash==2.9.2
 dash-core-components==2.0.0
 dash-html-components==2.0.0
 plotly==5.14.1
-scikit-learn==0.0.post1
+scikit-learn==1.2.2
 matplotlib==3.7.1
 pandas==1.5.3
 umap==0.1.1
