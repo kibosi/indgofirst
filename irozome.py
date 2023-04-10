@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 
 #ファイル読込み
-df = pd.read_excel(r"C:\Users\kibos\OneDrive\デスクトップ\自炊ブックス\藍データ解析\古濱様_藍染データ(230408).xlsx", sheet_name="反射率等")
+df = pd.read_excel("古濱様_藍染データ(230408).xlsx", sheet_name="反射率等")
 
 values_wave = list(range(360, 740, 10))  # 波長
 cols = [f"{v}nm" for v in values_wave]
@@ -166,7 +166,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 
 #ファイル読込み
-df1 = pd.read_excel(r"C:\Users\kibos\OneDrive\デスクトップ\自炊ブックス\藍データ解析\藍染めデータベース.xlsx", sheet_name="rawdata")
+df1 = pd.read_excel("藍染めデータベース.xlsx", sheet_name="rawdata")
 
 df1=df1[df1["location"]=="徳島矢野工場"]
 
