@@ -1,1 +1,1 @@
-web: gunicorn irozome:app
+web: gunicorn irozome:sever --log--file -

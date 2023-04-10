@@ -242,6 +242,8 @@ encoded_image = base64.b64encode(open(image_filename, 'rb').read())
 
 app = dash.Dash(__name__)
 
+server= app.server
+
 app.layout = html.Div([
     html.Div([
         dcc.Graph(id="fig", figure=fig)
