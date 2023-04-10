@@ -9,3 +9,4 @@ umap==0.1.1
 umap-learn==0.5.3
 numpy==1.23.5
 gunicorn==20.1.0
+openpyxl==3.1.2
