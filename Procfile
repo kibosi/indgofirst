@@ -1,1 +1,1 @@
-web: gunicorn irozome:sever --log-file -
+web: gunicorn irozome:sever --timeout 120
