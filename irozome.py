@@ -236,9 +236,6 @@ import pandas as pd
 from dash.dependencies import Input, Output
 
 
-# 画像の準備
-image_filename = r'C:\Users\kibos\OneDrive\画像\unnamed.png'  # ここに画像ファイル名を入力
-encoded_image = base64.b64encode(open(image_filename, 'rb').read())
 
 app = dash.Dash(__name__)
 
@@ -266,9 +263,7 @@ app.layout = html.Div([
     html.Div([
         dcc.Graph(id="fig4", figure=fig4)
     ], style={'width': '50%', 'display': 'inline-block'}),
-    html.Div([
-            html.Img(src='data:image/png;base64,{}'.format(encoded_image.decode()))
-        ], style={'width': '50%', 'display': 'inline-block'})
+    
     ])
 
 
