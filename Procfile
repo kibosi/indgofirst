@@ -1,1 +1,1 @@
-web: gunicorn irozome:server
+web: gunicorn irozome:app
