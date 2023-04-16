@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'indigo0'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6AFB670ED1D6408695A6E931BC0390C6 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_688E7E2651CF4267819054BE46E1CE35 }}
