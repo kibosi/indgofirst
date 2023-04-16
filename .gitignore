@@ -1,7 +1,9 @@
-venv/
+__pycache__/
 *.pyc
 *.pyo
 *.pyd
-__pycache__/
-*.pyproj
-*.suo
+*.pyc
+*.egg-info/
+dist/
+build/
+*.egg

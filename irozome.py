@@ -1,10 +1,10 @@
+import os
 import pandas as pd
 import numpy as np
-import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
 
-#ファイル読込み
+# Read the Excel file
 df = pd.read_excel("古濱様_藍染データ(230408).xlsx", sheet_name="反射率等")
 
 values_wave = list(range(360, 740, 10))  # 波長
@@ -184,7 +184,6 @@ material_colors1 = {'ポリエステル': '#636EFA',
                     'ポリエステル/コットン': '#636EFA', 
                     'トリアセテート': '#f68c1f', 
                     'ジアセテート': '#e062a7', 
-                    'タフタ': '#dfcc33', 
                     'リセヨル': '#59a1d3', 
                     'キュプラ': '#c85200'}
 
@@ -236,6 +235,9 @@ import pandas as pd
 from dash.dependencies import Input, Output
 
 
+# 画像の準備
+image_filename = r'C:\Users\kibos\OneDrive\デスクトップ\自炊ブックス\藍データ解析\色染め社パッチテスト_徳島天然灰汁発酵建て6回染め.jpeg'  # ここに画像ファイル名を入力
+encoded_image = base64.b64encode(open(image_filename, 'rb').read())
 
 app = dash.Dash(__name__)
 
@@ -254,6 +256,8 @@ app.layout = html.Div([
                 {'label': 'UMAP', 'value': 'UMAP'}
             ],
             value='PCA',
+            style={'display': 'inline-block'},
+            labelStyle={'display': 'inline-block'}
         ),
         dcc.Graph(id="fig3")
     ], style={'width': '50%', 'display': 'inline-block','vertical-align': 'top'}),
@@ -263,7 +267,9 @@ app.layout = html.Div([
     html.Div([
         dcc.Graph(id="fig4", figure=fig4)
     ], style={'width': '50%', 'display': 'inline-block'}),
-    
+    html.Div([
+            html.Img(src='data:image/png;base64,{}'.format(encoded_image.decode()))
+        ], style={'width': '50%', 'display': 'inline-block'})
     ])
 
 
