@@ -236,7 +236,7 @@ from dash.dependencies import Input, Output
 
 
 # 画像の準備
-image_filename = r'C:\Users\kibos\OneDrive\デスクトップ\自炊ブックス\藍データ解析\色染め社パッチテスト_徳島天然灰汁発酵建て6回染め.jpeg'  # ここに画像ファイル名を入力
+image_filename = "色染め社パッチテスト_徳島天然灰汁発酵建て6回染め.jpeg"  # ここに画像ファイル名を入力
 encoded_image = base64.b64encode(open(image_filename, 'rb').read())
 
 app = dash.Dash(__name__)
